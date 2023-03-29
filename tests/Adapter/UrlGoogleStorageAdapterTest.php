@@ -1,4 +1,5 @@
 <?php
+
 namespace Mrubiosan\FlyUrl\Tests\Adapter;
 
 use Google\Cloud\Storage\Bucket;

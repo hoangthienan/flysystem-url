@@ -1,4 +1,5 @@
 <?php
+
 namespace Mrubiosan\FlyUrl\Tests\Adapter;
 
 use MicrosoftAzure\Storage\Blob\BlobRestProxy;

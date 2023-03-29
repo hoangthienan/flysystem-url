@@ -1,4 +1,5 @@
 <?php
+
 namespace Mrubiosan\FlyUrl\Tests\Filesystem;
 
 use Mrubiosan\FlyUrl\Adapter\UrlAdapterInterface;

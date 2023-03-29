@@ -1,4 +1,5 @@
 <?php
+
 namespace Mrubiosan\FlyUrl\Tests\Adapter;
 
 use Aws\S3\S3Client;
@@ -31,7 +32,6 @@ class UrlAwsS3AdapterTest extends TestCase
 
     public function testGetUrlWithPrefix()
     {
-
         $this->clientMock->getObjectUrl('mybucket', 'a-prefix/foo/bar')
             ->shouldBeCalled()
             ->willReturn('http://example.com/a-prefix/foo/bar');

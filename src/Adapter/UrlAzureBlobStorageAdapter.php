@@ -1,4 +1,5 @@
 <?php
+
 namespace Mrubiosan\FlyUrl\Adapter;
 
 use League\Flysystem\AzureBlobStorage\AzureBlobStorageAdapter;

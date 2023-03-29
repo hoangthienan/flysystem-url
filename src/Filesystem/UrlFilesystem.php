@@ -1,4 +1,5 @@
 <?php
+
 namespace Mrubiosan\FlyUrl\Filesystem;
 
 use League\Flysystem\Filesystem;

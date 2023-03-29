@@ -1,4 +1,5 @@
 <?php
+
 namespace Mrubiosan\FlyUrl\Adapter;
 
 use League\Flysystem\AwsS3v3\AwsS3Adapter;
