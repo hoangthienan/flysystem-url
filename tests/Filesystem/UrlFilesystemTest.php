@@ -1,13 +1,15 @@
 <?php
 
-namespace Mrubiosan\FlyUrl\Tests\Filesystem;
+namespace Go1\FlyUrl\Tests\Filesystem;
 
-use Mrubiosan\FlyUrl\Adapter\UrlAdapterInterface;
-use Mrubiosan\FlyUrl\Filesystem\UrlFilesystem;
+use Go1\FlyUrl\Adapter\UrlAdapterInterface;
+use Go1\FlyUrl\Filesystem\UrlFilesystem;
 use PHPUnit\Framework\TestCase;
+use Prophecy\PhpUnit\ProphecyTrait;
 
 class UrlFilesystemTest extends TestCase
 {
+    use ProphecyTrait;
     public function testGetUrl()
     {
         $urlAdapterMock = $this->prophesize(UrlAdapterInterface::class);

@@ -1,18 +1,20 @@
 <?php
 
-namespace Mrubiosan\FlyUrl\Tests\Adapter;
+namespace Go1\FlyUrl\Tests\Adapter;
 
 use MicrosoftAzure\Storage\Blob\BlobRestProxy;
-use Mrubiosan\FlyUrl\Adapter\UrlAzureBlobStorageAdapter;
+use Go1\FlyUrl\Adapter\UrlAzureBlobStorageAdapter;
 use PHPUnit\Framework\TestCase;
+use Prophecy\PhpUnit\ProphecyTrait;
 
 class UrlAzureBlobStorageAdapterTest extends TestCase
 {
+    use ProphecyTrait;
     private $clientMock;
 
     private $testSubject;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->clientMock = $this->prophesize(BlobRestProxy::class);
         $this->testSubject = new UrlAzureBlobStorageAdapter(

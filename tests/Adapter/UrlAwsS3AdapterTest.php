@@ -1,18 +1,20 @@
 <?php
 
-namespace Mrubiosan\FlyUrl\Tests\Adapter;
+namespace Go1\FlyUrl\Tests\Adapter;
 
 use Aws\S3\S3Client;
-use Mrubiosan\FlyUrl\Adapter\UrlAwsS3Adapter;
+use Go1\FlyUrl\Adapter\UrlAwsS3Adapter;
 use PHPUnit\Framework\TestCase;
+use Prophecy\PhpUnit\ProphecyTrait;
 
 class UrlAwsS3AdapterTest extends TestCase
 {
+    use ProphecyTrait;
     private $clientMock;
 
     private $testSubject;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->clientMock = $this->prophesize(S3Client::class);
         $this->testSubject = new UrlAwsS3Adapter(

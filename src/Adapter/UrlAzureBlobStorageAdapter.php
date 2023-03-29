@@ -1,6 +1,6 @@
 <?php
 
-namespace Mrubiosan\FlyUrl\Adapter;
+namespace Go1\FlyUrl\Adapter;
 
 use League\Flysystem\AzureBlobStorage\AzureBlobStorageAdapter;
 use MicrosoftAzure\Storage\Blob\BlobRestProxy;
@@ -24,7 +24,7 @@ class UrlAzureBlobStorageAdapter extends AzureBlobStorageAdapter implements UrlA
         parent::__construct($client, $container, $prefix);
     }
 
-    public function getUrl($path)
+    public function getUrl($path): string
     {
         return $this->client->getBlobUrl($this->container, $this->applyPathPrefix($path));
     }

@@ -1,14 +1,10 @@
 <?php
 
-namespace Mrubiosan\FlyUrl\Adapter;
+namespace Go1\FlyUrl\Adapter;
 
 use League\Flysystem\AdapterInterface;
 
 interface UrlAdapterInterface extends AdapterInterface
 {
-    /**
-     * @param $path
-     * @return string
-     */
-    public function getUrl($path);
+    public function getUrl($path): string;
 }

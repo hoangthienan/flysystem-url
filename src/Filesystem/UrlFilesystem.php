@@ -1,9 +1,9 @@
 <?php
 
-namespace Mrubiosan\FlyUrl\Filesystem;
+namespace Go1\FlyUrl\Filesystem;
 
 use League\Flysystem\Filesystem;
-use Mrubiosan\FlyUrl\Adapter\UrlAdapterInterface;
+use Go1\FlyUrl\Adapter\UrlAdapterInterface;
 
 class UrlFilesystem extends Filesystem implements UrlFilesystemInterface
 {
@@ -17,8 +17,7 @@ class UrlFilesystem extends Filesystem implements UrlFilesystemInterface
         parent::__construct($adapter, $config);
     }
 
-
-    public function getUrl($path)
+    public function getUrl($path): string
     {
         return $this->adapter->getUrl($path);
     }
